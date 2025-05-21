@@ -4,3 +4,7 @@ node_modules/
 # BUILD FOLDER / BUILD INFO
 dist/
 *.tsbuildinfo
+
+# CSS FILES
+*.css
+*.css.map
