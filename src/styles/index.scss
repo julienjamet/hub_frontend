@@ -1,5 +1,7 @@
 /************************************************************[ IMPORTS ]*/
 @use './fonts/fonts';
+@use './mixins/mixins' as _;
+@use './media_queries/media_queries' as all;
 /************************************************************************/
 
 
@@ -9,5 +11,12 @@ body {
     font-weight: 600;
     letter-spacing: 0.125rem;
     margin: 0;
+    
+    #root {
+        height: 100vh;
+        
+        @include _.mixins;
+        @include all.media_queries;
+    }
 }
 /************************************************************************/
