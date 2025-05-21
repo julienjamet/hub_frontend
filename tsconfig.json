@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        // -- to enable modern JavaScript output
+        "target": "ES2022",
+        // -- to include DOM types and ES2022 built-ins
+        "lib": [
+            "DOM",
+            "ES2022"
+        ],
+        // -- to use ECMAScript module syntax ( import / export )
+        "module": "NodeNext",
+        // -- to use modern JSX transform ( no need to import React )
+        "jsx": "react-jsx",
+        // -- to enable all strict type-checking options
+        "strict": true,
+        // -- to check types in node_modules
+        "skipLibCheck": false,
+        // -- to generate no compiled files ( handled by Vite )
+        "noEmit": true,
+        // -- to allow .ts and .tsx imports ( requires noEmit )
+        "allowImportingTsExtensions": true,
+        // -- to use path aliases
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
