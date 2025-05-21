@@ -4,6 +4,8 @@ This is a [React](https://react.dev) application built with [Vite](https://vitej
 
 It uses strict linting rules to ensure a fast, modern, and maintainable development experience.
 
+Global styles are managed with [Sass](https://sass-lang.com), and the animated background is powered by [tsParticles](https://particles.js.org).
+
 ---
 
 ### 🛠️ Install dependencies
@@ -62,6 +64,24 @@ Previews the production build locally by serving the files from the `dist/` fold
 ### 🔵 TypeScript
 
 `TypeScript` is configured in strict mode, targeting modern ECMAScript.
+
+---
+
+### 🎨 Styles
+
+The project uses `Sass` for styling.
+
+Styles are written in `.scss` files and compiled into regular `CSS` during the build process.
+
+They are located in `src/styles/index.scss`.
+
+### ✨ Animated background
+
+Particles background is made with `tsParticles` using a CDN.
+ 
+Configuration is defined in `public/particles.js` and injected via `index.html`.
+
+Particles are lightweight, animated, and configured to stay behind the app content.
 
 ---
 
