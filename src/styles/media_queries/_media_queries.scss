@@ -1,0 +1,18 @@
+@mixin media_queries {
+    @media all and (max-width:500px) {
+        /*****************************************[ NAVBAR ]*/
+        .navbar {
+            flex-direction: column;
+            justify-content: center;
+        
+            a {
+                width: 70%;
+        
+                &:nth-child(1) {
+                    margin-bottom: 10vh;
+                }
+            }
+        }
+        /****************************************************/
+    }
+}

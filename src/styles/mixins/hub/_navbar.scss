@@ -1,0 +1,31 @@
+/************************************************************[ IMPORTS ]*/
+@use '../../colors/colors';
+/************************************************************************/
+
+
+/*************************************************************[ NAVBAR ]*/
+@mixin navbar {
+    .navbar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        
+        a {
+            width: 20vw;
+            text-align: center;
+            font-size: 2rem;
+            color: colors.$primary;
+            text-decoration: none;
+            background: linear-gradient(to bottom, rgba($color: colors.$secondary, $alpha: 0.5), colors.$secondary);
+            padding: 1rem;
+            border-radius: 0.5rem;
+
+            &:hover {
+                background: linear-gradient(to bottom, colors.$secondary, colors.$secondary);
+                box-shadow: 0.0625rem 0.0625rem 0.9375rem colors.$secondary, -0.0625rem -0.0625rem 0.9375rem colors.$secondary;
+            }
+        }
+    }
+}
+/************************************************************************/

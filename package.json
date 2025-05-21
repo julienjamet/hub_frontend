@@ -2,7 +2,7 @@
     "name": "hub_frontend",
     "author": "Julien Jamet",
     "private": true,
-    "version": "0.2.0",
+    "version": "0.3.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -12,7 +12,8 @@
     },
     "dependencies": {
         "react": "^19.0.0",
-        "react-dom": "^19.0.0"
+        "react-dom": "^19.0.0",
+        "react-router-dom": "^7.6.0"
     },
     "devDependencies": {
         "@types/node": "^22.14.0",

@@ -1,4 +1,19 @@
+/************************************************************[ IMPORTS ]*/
+@use './mixins/mixins';
+@use './media_queries/media_queries';
+/************************************************************************/
+
+
+/**************************************************************[ INDEX ]*/
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    
+    #root {
+        height: 100vh;
+        
+        @include mixins.mixins;
+        @include media_queries.media_queries;
+    }
 }
+/************************************************************************/

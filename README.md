@@ -128,3 +128,19 @@ The [`release.sh`](./release.sh) script automates :
 - Creating and pushing ( optional ) a `Docker` image
 
 - Tagging the release commit
+
+---
+
+### 🧭 Routing
+
+Routing is handled by [React Router](https://reactrouter.com).
+
+The following routes are available :
+
+- `/training` : displays the `Training` page
+
+- `/projects` : displays the `Projects` page
+
+Any other route will redirect to the homepage ( `/` ) via `React Router`'s `Navigate` component.
+
+The application includes a [Navbar](./src/components/hub/Navbar.tsx) component to navigate between the `Training` page and the `Projects` page.
