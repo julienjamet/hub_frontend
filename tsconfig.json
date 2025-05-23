@@ -18,7 +18,13 @@
         // -- to generate no compiled files ( handled by Vite )
         "noEmit": true,
         // -- to allow .ts and .tsx imports ( requires noEmit )
-        "allowImportingTsExtensions": true
+        "allowImportingTsExtensions": true,
+        // -- to use path aliases
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
     },
     "include": [
         "src/**/*"
