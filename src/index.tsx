@@ -2,6 +2,7 @@
 /************************************[ NPM MODULES ]*/
 import ReactDOM from 'react-dom/client';
 import React, { ReactElement } from 'react';
+import '@fortawesome/fontawesome-free/css/all.css';
 /****************************************************/
 
 /*****************************************[ STYLES ]*/
