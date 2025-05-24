@@ -1,0 +1,28 @@
+/************************************************************[ IMPORTS ]*/
+@use '../../colors/colors';
+/************************************************************************/
+
+
+/**********************************************************[ SCROLLBAR ]*/
+@mixin scrollbar {
+    ::-webkit-scrollbar {
+        width: 0.625rem;
+
+        &-track {
+            margin: 2rem 0;
+            background: rgba($color: colors.$secondary, $alpha: 0.25);
+            border-radius: 0.5rem;
+        }
+
+        &-thumb {
+            background: colors.$secondary;
+            border-radius: 0.5rem;
+            cursor: grab;
+
+            &:active {
+                cursor: grabbing;
+            }
+        }
+    }
+}
+/************************************************************************/

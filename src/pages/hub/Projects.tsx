@@ -3,6 +3,11 @@
 import { FC, ReactElement } from 'react';
 import { useLocation } from 'react-router-dom';
 /****************************************************/
+
+/*************************************[ COMPONENTS ]*/
+import { Header } from '@/components/hub/header/Header.tsx';
+import { Main } from '@/components/hub/main/Main.tsx';
+/****************************************************/
 /************************************************************************/
 
 
@@ -14,8 +19,12 @@ export const Projects: FC = (): ReactElement => {
 
     /*************************************[ RETURN ]*/
     return (
-        <div className='projects'>
-            This is the {location} page
+        <div className='background'>
+            <div className='projects'>
+                <Header location={location} />
+
+                <Main location={location} />
+            </div>
         </div>
     );
     /************************************************/
