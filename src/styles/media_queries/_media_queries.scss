@@ -1,18 +1,81 @@
 @mixin media_queries {
+    /*****************************************[ TABLET ]*/
+    @media all and (max-width:1380px) {
+        // -- project cards
+        .card {
+            img {
+                display: none;
+            }
+            
+            .skills {
+                overflow: auto;
+                
+                img {
+                    display: flex;
+                }
+            }
+        }
+    }
+    /****************************************************/
+    
+    
+    /*****************************************[ MOBILE ]*/
     @media all and (max-width:500px) {
-        /*****************************************[ NAVBAR ]*/
+        // -- navbar
         .navbar {
             flex-direction: column;
             justify-content: center;
-        
+            
             a {
                 width: 70%;
-        
+                
                 &:nth-child(1) {
                     margin-bottom: 10vh;
                 }
             }
         }
-        /****************************************************/
+
+        // -- projects
+        .background {
+            .projects {
+                header {
+                    h1 {
+                        justify-content: center;
+
+                        a {
+                            display: none;
+                        }
+                    }
+
+                    .paragraphs {
+                        text-align: justify;
+                        padding: 0 1rem;
+                    }
+                }
+
+                main {
+                    .card {
+                        height: 50vh;
+                        width: 55vw;
+                        padding: 1rem 4rem;
+                        
+                        img {
+                            display: flex;
+                            width: 70vw;
+                        }
+                        
+                        .skills {
+                            width: 75vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        // -- scrollbar
+        ::-webkit-scrollbar {
+            display: none;
+        }
     }
+    /****************************************************/
 }

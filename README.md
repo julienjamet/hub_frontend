@@ -16,6 +16,26 @@ npm i
 
 ---
 
+### 🌍 Environment configuration
+
+`Vite` natively supports loading environment variables from `.env` files.
+
+⚠️ Before proceeding, make sure to create a `.env` file by copying the [.env.example](./.env.example) file.
+
+---
+
+### 🔄 Backend Communication
+
+To use the frontend properly, a running backend instance is required.
+
+You can easily start it using my last `Docker` image with the following command :
+
+```bash
+docker run -d -p 8080:8080 julienjamet1992/hub_backend:v0.4.0
+```
+
+---
+
 ### 📦 Scripts
 
 | Script            | Description                                       |
