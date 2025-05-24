@@ -16,6 +16,20 @@ npm i
 
 ---
 
+### 🔄 Communication with backend
+
+From now, you need to have a `backend` running to use the `frontend` properly.
+
+You can easily do it using a `Docker` image by running :
+
+```bash
+docker run -d -p 8080:8080 julienjamet1992/hub_backend:v0.4.0
+```
+
+You will then need to create a `.env` file from the [.env.example](./.env.example) and set the `VITE_NODE_ENV`variable as `development`.
+
+---
+
 ### 📦 Scripts
 
 | Script            | Description                                       |

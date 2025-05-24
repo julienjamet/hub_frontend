@@ -1,31 +1,30 @@
 /************************************************************[ IMPORTS ]*/
 /************************************[ NPM MODULES ]*/
 import { FC, ReactElement } from 'react';
-import { useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 /****************************************************/
 
-/*************************************[ COMPONENTS ]*/
-import { Header } from '@/components/hub/header/Header.tsx';
-import { Main } from '@/components/hub/main/Main.tsx';
+/*************************************[ INTERFACES ]*/
+import { IProjectCard } from '@/interfaces/hub/props/props.ts';
 /****************************************************/
 /************************************************************************/
 
 
-/***********************************************************[ PROJECTS ]*/
-export const Projects: FC = (): ReactElement => {
+/*****************************************************[ LOCKED PROJECT ]*/
+export const LockedProject: FC<IProjectCard> = (props): ReactElement => {
     /*************************[ STATES & VARIABLES ]*/
-    const location: string = useLocation().pathname.split('/')[1];
+    const projectUrl: string = `/${props.project.category}`;
     /************************************************/
 
     /*************************************[ RETURN ]*/
     return (
-        <div className='background'>
-            <div className='projects'>
-                <Header location={location} />
+        <NavLink to={projectUrl}>
+            <i className='fa-solid fa-lock' />
 
-                <Main location={location} />
-            </div>
-        </div>
+            <h2>{props.project.name}</h2>
+
+            <span>Coming soon</span>
+        </NavLink>
     );
     /************************************************/
 };

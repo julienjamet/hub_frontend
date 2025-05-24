@@ -1,6 +1,7 @@
 /************************************************************[ IMPORTS ]*/
 @use './hub/navbar';
 @use './hub/projects';
+@use './hub/scrollbar';
 /************************************************************************/
 
 
@@ -8,5 +9,6 @@
 @mixin mixins {
     @include navbar.navbar;
     @include projects.projects;
+    @include scrollbar.scrollbar;
 }
 /************************************************************************/
