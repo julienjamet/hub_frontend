@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 /******************************************[ PAGES ]*/
 import { Projects } from './pages/hub/Projects.tsx';
+import { Booki } from './pages/booki/Booki.tsx';
 /****************************************************/
 
 /*************************************[ COMPONENTS ]*/
@@ -33,6 +34,13 @@ export const App: FC = (): ReactElement => {
                     path='/projects'
                     element={
                         <Projects />
+                    }
+                />
+
+                <Route
+                    path='/training/booki'
+                    element={
+                        <Booki />
                     }
                 />
 

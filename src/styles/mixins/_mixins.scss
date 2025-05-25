@@ -2,6 +2,8 @@
 @use './hub/navbar';
 @use './hub/projects';
 @use './hub/scrollbar';
+
+@use './training/booki/booki';
 /************************************************************************/
 
 
@@ -10,5 +12,7 @@
     @include navbar.navbar;
     @include projects.projects;
     @include scrollbar.scrollbar;
+
+    @include booki.booki;
 }
 /************************************************************************/
