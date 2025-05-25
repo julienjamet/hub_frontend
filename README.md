@@ -159,6 +159,8 @@ The following routes are available :
 
 - `/training` : displays the `Training` page
 
+  - `/training/booki` : displays the `Booki` page
+
 - `/projects` : displays the `Projects` page
 
 Any other route will redirect to the homepage ( `/` ) via `React Router`'s `Navigate` component.

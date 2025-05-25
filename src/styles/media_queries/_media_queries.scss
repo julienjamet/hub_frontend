@@ -1,3 +1,9 @@
+/************************************************************[ IMPORTS ]*/
+@use '../colors/colors';
+/************************************************************************/
+
+
+/******************************************************[ MEDIA QUERIES ]*/
 @mixin media_queries {
     /*****************************************[ TABLET ]*/
     @media all and (max-width:1380px) {
@@ -37,6 +43,8 @@
 
         // -- projects
         .background {
+            animation: none;
+
             .projects {
                 header {
                     h1 {
@@ -58,6 +66,7 @@
                         height: 50vh;
                         width: 55vw;
                         padding: 1rem 4rem;
+                        animation: none;
                         
                         img {
                             display: flex;
@@ -76,6 +85,25 @@
         ::-webkit-scrollbar {
             display: none;
         }
+
+        // -- projects
+        .projects {
+            .return {
+                height: 0;
+                background-color: colors.$tertiary;
+
+                a {
+                    display: none;
+                }
+            }
+
+            .fa-circle-info {
+                position: absolute;
+                top: 0.5rem;
+                right: 0;
+            }
+        }
     }
     /****************************************************/
 }
+/************************************************************************/

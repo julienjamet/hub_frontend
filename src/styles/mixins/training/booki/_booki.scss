@@ -1,0 +1,632 @@
+@mixin booki {
+    .booki {
+        /**********************************[ HUB ADDITIONS ]*/
+        background-color: #ffffff;
+    
+        .return {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3rem;
+            background-color: #F2F2F2;
+            padding-left: 3rem;
+
+            a {
+                &:hover {
+                    color: #0065FC;
+                }
+            }
+
+            i {
+                margin-right: 2rem;
+
+                &.fa-circle-info {
+                    font-size: 1.5rem;
+                    color: #0065FC;
+                }
+            }
+        }
+        /****************************************************/
+        
+
+        /******************************************[ BOOKI ]*/
+        /*GENERAL*/
+        * {
+            box-sizing: border-box;
+        }
+
+
+        main {
+            padding: 0 2%;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+
+        /*HEADER*/
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 3%;
+        }
+
+        header ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header ul a {
+            padding: 38px 30px 0 30px;
+        }
+
+        header ul a:hover {
+            color: #0065FC;
+            border-top: 3px solid #0065FC;
+        }
+
+
+        /*TITLE*/
+        .title h1 {
+            font-size: 22px;
+        }
+
+
+        /*FORM*/
+        form i {
+            font-size: 20px;
+            background-color: #F2F2F2;
+            padding: 14px 17px 16px 21px;
+            border-radius: 15px 0 0 15px;
+        }
+    
+        form label {
+            display: none;
+        }
+
+        form input {
+            height: 50px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #form__search {
+            padding-left: 15px;
+            border: 1px solid #F2F2F2;
+        } 
+
+        #form__search:focus {
+            outline: none;
+        }
+
+        #form__submit {
+            color: white;
+            background-color: #0065FC;
+            padding: 0 18px;
+            border: none;
+            border-radius: 0 15px 15px 0;
+            cursor: pointer;
+        }
+
+
+        /*FILTERS*/
+        .filters {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 12px;
+            margin: 30px 0 0 10px;
+        }
+
+        .filters a {
+            display: flex;
+            align-items: center;
+        }
+
+        .filters a h2 {
+            padding: 14px 21px 12px 35px;
+            border: 2px solid #cfcece;
+            border-radius: 0 30px 30px 0;
+            margin: 0;
+        }
+
+        .filters a h2:hover {
+            background-color: #DEEBFF;
+        }
+        
+        .filters a:focus {
+            color: #0065FC;
+        }
+
+        .filters i {
+            font-size: 20px;
+            color: #0065FC;
+            background-color: #DEEBFF;
+            padding: 16px;
+            border-radius: 100%;
+            margin-right: -25px;
+            z-index: 1;
+        }
+
+        #child_icon {
+            font-size: 22px;
+            padding: 16px 18px 14px 18px;
+        }
+
+        #heart_icon {
+            padding: 17px 16px 15px 17px;
+        }
+
+
+        /*INFO*/
+        .info {
+            display: flex;
+            align-items: center;
+            margin: 15px 0 25px 10px;
+        }
+
+        .info i {
+            font-size: 12px;
+            color: #0065FC;
+            padding: 5px 9px 5px 9px;
+            border: 1px solid #cfcece;
+            border-radius: 100%;
+            margin: 0 10px 4px 0;
+        }
+
+
+        /*LODGING_GENERAL*/
+        .lodging {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .lodging__block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 625px;
+            background-color: #F2F2F2;
+            padding: 26px 3% 35px 3%;
+            border-radius: 20px;
+        }
+
+        #lodging__block--main {
+            width: 66%;
+        }
+
+        #lodging__block--starred {
+            width: 30%;
+        }
+
+        .lodging h2, .activities h2 {
+            display: flex;
+            justify-content: space-between;
+            font-size: 134%;
+        }
+
+        #chart-line_icon {
+            height: 24px;
+        }
+
+        .lodging__line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .lodging__column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 500px;
+        }
+
+        #show_more {
+            width: 140px;
+            font-size: 110%;
+            font-weight: bold;
+            margin: -10px 0 0 4px;
+        }
+
+        #show_more:hover {
+        text-decoration: underline;
+        }
+
+
+        /*LODGING_CARD*/
+        .lodging__card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30%;
+            background-color: white;
+            padding: 5px;
+            border-radius: 20px;
+            box-shadow: 4px 6px 10px #e7e7e7, -4px -4px 10px #e7e7e7;
+        }
+
+        .lodging__card:hover, .lodging__card--starred:hover, .activities__card:hover {
+            box-shadow: 4px 6px 10px #cfcece, -4px -4px 10px #cfcece;
+        }
+
+        .lodging__card img {
+            min-height: 115px;
+            max-height: 115px;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+        }
+
+        .card_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-left: 4%;
+        }
+
+        .lodging h3 {
+            font-size: 96%;
+            margin: 10px 0 -5px 0;
+        }
+
+        .min_price {
+            font-size: 85%;
+        }
+
+        .rating {
+            margin: -10px 0 5px 0;
+        }
+
+        .lodging i {
+            color: #0065FC;
+            font-size: 75%;
+        }
+
+        .lodging .grey-star {
+            color: #cfcece;
+        }
+
+
+        /*LODGING_CARD--STARRED*/
+        .lodging__card--starred {
+            flex-direction: row;
+            align-items: center;
+            min-height: 145px;
+            width: 100%;
+        }
+        
+        .lodging__card--starred img {
+            min-height: 100%;
+            min-width: 130px;
+            max-width: 130px;
+            border-radius: 15px 0 0 15px;
+            object-fit: cover;
+        }
+
+        .card_info--starred {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            padding-left: 6%;
+        }
+
+        .card_info--starred i {
+            font-size: 70%;
+        }
+
+
+        /*ACTIVITIES_GENERAL*/
+        .activities {
+            display: flex;
+            flex-direction: column;
+            margin: 48px 0 60px 0;
+        }
+
+        .activities__line {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .activities__column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 445px;
+            width: 22%;
+        }
+
+
+        /*ACTIVITIES_CARD*/
+        .activities__card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px;
+            box-shadow: 4px 6px 10px #e7e7e7;
+        }
+
+        .activities__card img {
+            height: 388px;
+            width: 100%;
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+        }
+
+        #pomergues img {
+            height: 176px;
+        }
+
+        #frioul img {
+            height: 116px;
+        }
+
+        #garde img {
+            height: 136px;
+            object-position: 0px 0px;
+        }
+
+        #longchamp img {
+            height: 156px;
+        }
+
+        .activities__card h3 {
+            display: flex;
+            align-items: center;
+            height: 17px;
+            font-size: 15px;
+            margin: 20px 0 20px 8%;
+        }
+
+
+        /*FOOTER*/
+        footer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #F2F2F2;
+            padding: 30px 50px 30px 50px;
+        }
+
+        .footer__block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer__block:nth-child(2) {
+            margin-left: -50px;
+        }
+
+        .footer__block a {
+            margin-bottom: 15px;
+        }
+
+        .footer__block a:hover {
+            text-decoration: underline;
+        }
+
+
+        /*TABLET*/
+        @media all and (max-width: 992px) {
+            .lodging {
+                flex-direction: column;
+            }
+
+            .lodging__block {
+                padding: 15px 1% 15px 1%;
+            }
+
+            #lodging__block--starred {
+                align-items: center;
+                height: 300px;
+                width: 100%;
+                margin-bottom: 80px;
+            }
+
+            #lodging__block--starred h2 {
+                justify-content: space-around;
+                width: 32%;
+            }
+
+            .lodging__column {
+                flex-direction: row;
+            }
+
+            .lodging__card--starred {
+                height: 80%;
+                width: 32%;
+            }
+
+            #lodging__block--main {
+                order: 1;
+                width: 100%;
+            }
+
+            .activities__column {
+                width: 24%;
+            }
+        }
+
+
+        /*MOBILE*/
+        @media all and (max-width: 768px) {
+            main {
+                padding: 0;
+            }
+
+            .title, form, .filters, .info, #lodging__block--main, .activities {
+                padding: 0 4% 0 4%;
+            }
+    
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 25px 0 25px 0;
+                margin-bottom: -20px;
+            }
+
+            header img {
+                margin: 0 0 30px 35px;
+            }
+
+            header nav {
+                width: 100%;
+            }
+
+            header ul {
+                padding: 0;
+            }
+
+            header ul li {
+                width: 50%;
+            }
+
+            header ul a {
+                display: block;
+                text-align: center;
+                font-size: 18px;
+                padding: 0 0 15px 0;
+                border-bottom: 4px solid #F2F2F2;
+            }
+
+            header ul a:hover {
+                border-top: none;
+                border-bottom: 4px solid #0065FC;
+            }
+    
+            form {
+                display: flex;
+                justify-content: center;
+                margin: 40px 0 30px 0;       
+            }
+
+            form i {
+                padding-right: 47px;
+                margin-right: -30px;
+            }
+
+            #form__search {
+                width: 75%;
+                max-width: 300px;
+            }
+
+            #form__submit {
+               padding: 0 6px;
+            }
+
+            form button {
+                display: contents;
+            }
+
+            form button i {
+                color: white;
+                background-color: #0065FC;
+                padding: 16px 18px 14px 18px;
+                border-radius: 15px;
+                margin: 0 0 0 -30px;
+            }
+
+            .filters {
+                gap: 15px;
+            }
+
+            .filters a h2 {
+                font-size: 16px;
+            }
+
+            .filters h2:nth-child(1) {
+                width: 100%;
+                margin-bottom: 0;
+            }
+    
+            #lodging__block--starred {
+                height: 600px;
+                border-radius: 0;
+                margin-bottom: 20px;
+            }
+
+            .lodging__column, .lodging__line, .activities__line, footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .lodging__column {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            #lodging__block--starred h2 {
+                width: 100%;
+            }
+
+            .lodging__card {
+                width: 100%;
+                max-width: 450px;
+            }
+
+            .lodging__card--starred {
+                height: 150px;
+                width: 95%;
+            }
+
+            .lodging__card--starred img {
+                min-width: 35%;
+            }
+
+            #lodging__block--main {
+                height: 1500px;
+                background-color: white;
+                margin-bottom: -20px;
+            }
+
+            .lodging__line {
+                margin-bottom: 28px;
+                height: 50%;
+            }
+     
+            .activities__column {
+                height: 100%;
+                width: 100%;
+                margin-bottom: 25px;
+            }
+
+            .activities a {
+                display: flex;
+                justify-content: center;
+            }
+
+            .activities__card {
+                height: 200px;
+                width: 100%;
+                max-width: 450px;
+            }
+
+            #pomergues, #garde {
+                margin-bottom: 25px;
+            }
+
+            .activities__card img {
+                min-height: 150px;
+            }
+
+            .activities__card h3 {
+                margin-top: 18px;
+            }
+
+            footer {
+                align-items: flex-start;
+                padding-left: 8%;
+                margin-top: -30px;
+            }
+
+            .footer__block:nth-child(2) {
+                margin-left: 0;
+            }
+        }
+    }
+}

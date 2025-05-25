@@ -14,7 +14,7 @@ import { Skill } from '@/interfaces/hub/objects/objects.ts';
 /**************************************************[ AVAILABLE PROJECT ]*/
 export const AvailableProject: FC<IProjectCard> = (props): ReactElement => {
     /*************************[ STATES & VARIABLES ]*/
-    const projectUrl: string = `/${props.project.category}`;
+    const projectUrl: string = `/${props.project.category}/${props.project.name.toLowerCase().replace(/ /g, '_')}`;
     /************************************************/
 
     /*************************************[ RETURN ]*/
