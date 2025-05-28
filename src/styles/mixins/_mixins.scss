@@ -4,6 +4,7 @@
 @use './hub/scrollbar';
 
 @use './training/booki/booki';
+@use './training/oh_my_food/oh_my_food';
 /************************************************************************/
 
 
@@ -14,5 +15,6 @@
     @include scrollbar.scrollbar;
 
     @include booki.booki;
+    @include oh_my_food.ohMyFood;
 }
 /************************************************************************/

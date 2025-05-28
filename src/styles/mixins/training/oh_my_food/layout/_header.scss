@@ -1,0 +1,18 @@
+header {
+    display: flex;
+    align-items: center;
+    a {
+        z-index: 1;
+    }
+    i {
+        font-size: 20px;
+        margin: 3px -70px 0 15px;
+    }
+    img {
+        max-height: 110px;
+        width: 100%;
+        padding: 30px 20% 30px 20%;
+        box-shadow: 0 6px 6px #404040;
+        z-index: 0;
+    }
+}

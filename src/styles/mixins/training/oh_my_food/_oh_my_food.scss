@@ -1,0 +1,542 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$gradient: linear-gradient(-10deg, $color-primary, $color-secondary);
+
+
+@mixin button {
+    height: 70px;
+    width: 250px;
+    background: $gradient;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px #e0e0e0;
+    cursor: pointer;
+    span {
+        font-size: 20px;
+        color: white;
+    }
+    &:hover {
+        opacity: .85;
+        box-shadow: 2px 2px 6px #404040;
+    }
+}
+@mixin working__step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 375px;
+    font-size: 20px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #e0e0e0;
+    .nbr {
+            position: absolute;
+            left: -15px;
+            color: white;
+            background-color: $color-primary;
+            border-radius: 100%;
+            padding: 5px 10px 2px 10px;
+    }
+    .step__main {
+            display: flex;
+            align-items: center;
+            i {
+                color: grey;
+                padding: 40px 0 40px 40px;
+            }
+            p {
+                position: absolute;
+                left: 85px;
+            } 
+    }
+    &:hover {
+            i {
+                color: $color-primary;
+            }
+            background-color: lighten($color: $color-primary, $amount: 30);
+            cursor: default;
+    }      
+}
+@mixin resto__card {
+    position: relative;
+    height: 250px;
+    width: 90%;
+    max-width: 375px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px #e0e0e0;
+    img {
+        height: 70%;
+        width: 100%;
+        border-radius: 25px 25px 0 0;
+        object-fit: cover;
+    }
+    .new {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: #004700;
+        background-color: $color-tertiary;
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+    }
+    .card_info {
+        position: relative;
+        padding-left: 20px;
+        margin-top: 0;
+        h3 {
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+        i {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 25px;                        
+        }
+        .fa-solid {
+            color: $color-primary;
+            opacity: 0;
+            transition: opacity 800ms;
+            z-index: 1;
+            &:hover {
+                opacity: 1;
+            } 
+        }
+    }
+    &:hover {
+        box-shadow: 4px 6px 10px #cfcece, -4px -4px 10px #cfcece;
+    }
+}
+@mixin dish {
+    display: flex;
+    background-color: white;
+    min-height: 90px;
+    max-height: 90px;
+    width: 100%;
+    max-width: 375px;
+    padding: 0 5px 0px 5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #e0e0e0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation: prog 1000ms 400ms + ($i * 400ms) both ease-in-out;
+        }
+    }
+    &_main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 85%;
+        overflow: hidden;
+        h4 {
+            margin: 5px 0 5px 0;
+        }
+        p {
+            margin: 0;
+            padding-right: 5px;
+        }
+    }
+    &_price {
+        align-self: flex-end;
+        font-weight: bold;
+        padding-right: 2%;
+        padding-bottom: 4px;
+    }
+    & .i {
+        height: 90px;
+        width: 90px;
+        color: white;
+        background-color: $color-tertiary;
+        padding: 30px;
+        border-radius: 0 20px 20px 0;
+        margin: 0 -100px 0 30px;
+        transition: margin-right 400ms;
+        i {
+            font-size: 30px;
+            transform: rotate(180deg);
+            transition: transform 700ms;
+        }
+    }
+    &:hover {
+        box-shadow: 4px 6px 10px #cfcece, -4px -4px 10px #cfcece;
+        cursor: pointer;
+        .dish_main {
+            #st-jacques {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            p {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        .dish_price {
+            margin-right: -20px;
+        }
+        .i {
+            margin-right: -5px;
+            i {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+
+@keyframes prog {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@mixin ohMyFood {
+    .oh_my_food {
+        background-color: #f7f7f7;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .return {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 3rem;
+            background-color: #F2F2F2;
+            padding-left: 3rem;
+
+            a {
+                color: black;
+                text-decoration: none;
+
+                &:hover {
+                    color: #9356DC;
+                }
+            }
+
+            i {
+                margin-right: 2rem;
+
+                &.fa-circle-info {
+                    font-size: 1.5rem;
+                    color: #9356DC;
+                }
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        @font-face {
+            font-family: "Roboto";
+            src: url("../polices/Roboto-Medium.ttf");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Shrikhand";
+            src: url("../polices/Shrikhand-Regular.ttf");
+            font-display: swap;
+        }
+        body {
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+            max-width: 2000px;
+            margin: 0 auto 0 auto;
+            .menu h2, .logo {
+                font-family: Shrikhand;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+        }
+
+
+        .intro {
+            width: 100%;
+            .location {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 20px;
+                background-color: #f0f0f0;
+                i {
+                    margin: -5px 15px 0 0;
+                }
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 450px;
+                width: 100%;
+                text-align: center;
+                background-color: #f7f7f7;
+                padding: 60px 0 60px 0;
+                h2 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 25px;
+                    color: grey;
+                }
+                button {
+                    @include button 
+                }
+            }
+        }
+
+
+        header {
+            display: flex;
+            align-items: center;
+            a {
+                z-index: 1;
+            }
+            i {
+                font-size: 20px;
+                margin: 3px -70px 0 15px;
+            }
+            img {
+                max-height: 110px;
+                width: 100%;
+                padding: 30px 20% 30px 20%;
+                box-shadow: 0 6px 6px #404040;
+                z-index: 0;
+            }
+        }
+
+
+        main {
+            display: flex;
+            flex-direction: column;
+            .main_pic {
+                max-height: 190px;
+                object-fit: cover;
+                object-position: 0 55%;
+            }
+        
+        /*WORKING*/
+            .working {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 40px 0 80px 0;
+                h2 {
+                    align-self: flex-start;
+                    margin-left: 2%;
+                }
+                .block__steps {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 360px;
+                    width: 85%;
+                    .step {
+                        @include working__step
+                    }
+                }
+            }
+        
+        /*RESTAURANTS*/
+            .restaurants {
+                width: 100%;
+                background-color: #f7f7f7;
+                padding: 40px 0 80px 0;
+                h2 {
+                    margin-left: 2%;
+                }
+                .block__card {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 1100px;
+                    .resto__card {
+                       @include resto__card 
+                    }
+                }
+            }
+        
+        /*MENU*/
+            .menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background-color: #f7f7f7;
+                padding: 20px;
+                border-radius: 50px 50px 0 0;
+                margin-top: -50px;
+                .menu_title {
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    min-width: 260px;
+                    width: 100%;
+                    i {
+                        position: absolute;
+                        right: 0;
+                        top: 20px;
+                        font-size: 25px;
+                        cursor: pointer;
+                    }
+                    .fa-solid {
+                        color: $color-primary;
+                        z-index: 1;
+                        opacity: 0;
+                        transition: opacity 800ms;
+                        &:hover {
+                            opacity: 1;
+                        } 
+                    }
+                }
+                .block__dishes {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                    h3 {
+                        font-weight: normal;
+                        align-self: flex-start;
+                        border-bottom: 2px solid $color-tertiary;
+                    }
+                    .dish {
+                        @include dish;
+                    }
+                }
+                #command {
+                    margin: 40px 0 40px 0;
+                }
+                button {
+                    @include button
+                }
+            }
+        }
+
+
+        footer {
+            color: white;
+            background-color: #404040;
+            padding: 30px 0 40px 30px;
+            .footer {
+                display: flex;
+                flex-direction: column;
+                div {
+                    display: flex;
+                    align-items: center;
+                    i {
+                        font-size: 14px;
+                        margin: 0 15px 0 0;
+                    }
+                    #partners {
+                        margin-left: -5px;
+                    }
+                }
+                a {
+                    color: white;
+                    margin: 5px 0 5px 0;
+                    &:nth-child(4) {
+                        margin-top: 5px;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }  
+        }
+
+
+        @media all and (min-width: 768px) {
+            main {
+                .main_pic {
+                    max-height: 300px;
+                }
+                .menu {
+                    .menu_title {
+                        padding-left: 20px;
+                        i {
+                            right: 20px;
+                        }
+                    }
+                    .block__dishes {
+                        .dish {
+                            padding-left: 25px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        @media all and (min-width: 992px) {
+            main {
+                .working {
+                    .block__steps {
+                        flex-direction: row;
+                        height: 280px;
+                        width: 90%;
+                        .step {
+                            width: 30%;
+                            max-width: 375px;
+                        }
+                    }
+                }
+                .restaurants {
+                    .block__card {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        max-height: 650px;
+                        max-width: 1150px;
+                        padding: 0 8% 0 8%;
+                        margin: 0 auto 0 auto;
+                    }
+                }
+                .main_pic {
+                    max-height: 350px;
+                }
+                .menu {
+                    .block__dishes {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        max-height: 310px;
+                        max-width: 1200px;
+                        margin-bottom: 40px;
+                        h3 {
+                            position: absolute;
+                            left: 8%;
+                        }
+                        .dish {
+                            width: 30%;
+                            max-width: 350px;
+                            padding-left: 20px;
+                            margin: 90px 0 0 0;
+                        }
+                        #foie-gras {
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

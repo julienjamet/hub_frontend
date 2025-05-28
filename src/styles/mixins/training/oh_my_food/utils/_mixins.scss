@@ -1,0 +1,184 @@
+@mixin button {
+    height: 70px;
+    width: 250px;
+    background: $gradient;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px #e0e0e0;
+    cursor: pointer;
+    span {
+        font-size: 20px;
+        color: white;
+    }
+    &:hover {
+        opacity: .85;
+        box-shadow: 2px 2px 6px #404040;
+    }
+}
+@mixin working__step {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 375px;
+    font-size: 20px;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #e0e0e0;
+    .nbr {
+            position: absolute;
+            left: -15px;
+            color: white;
+            background-color: $color-primary;
+            border-radius: 100%;
+            padding: 5px 10px 2px 10px;
+    }
+    .step__main {
+            display: flex;
+            align-items: center;
+            i {
+                color: grey;
+                padding: 40px 0 40px 40px;
+            }
+            p {
+                position: absolute;
+                left: 85px;
+            } 
+    }
+    &:hover {
+            i {
+                color: $color-primary;
+            }
+            background-color: lighten($color: $color-primary, $amount: 30);
+            cursor: default;
+    }      
+}
+@mixin resto__card {
+    position: relative;
+    height: 250px;
+    width: 90%;
+    max-width: 375px;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px #e0e0e0;
+    img {
+        height: 70%;
+        width: 100%;
+        border-radius: 25px 25px 0 0;
+        object-fit: cover;
+    }
+    .new {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        color: #004700;
+        background-color: $color-tertiary;
+        padding: 5px 10px 5px 10px;
+        border-radius: 5px;
+    }
+    .card_info {
+        position: relative;
+        padding-left: 20px;
+        margin-top: 0;
+        h3 {
+            margin-top: 10px;
+            margin-bottom: -10px;
+        }
+        i {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 25px;                        
+        }
+        .fa-solid {
+            color: $color-primary;
+            opacity: 0;
+            transition: opacity 800ms;
+            z-index: 1;
+            &:hover {
+                opacity: 1;
+            } 
+        }
+    }
+    &:hover {
+        box-shadow: 4px 6px 10px #cfcece, -4px -4px 10px #cfcece;
+    }
+}
+@mixin dish {
+    display: flex;
+    background-color: white;
+    min-height: 90px;
+    max-height: 90px;
+    width: 100%;
+    max-width: 375px;
+    padding: 0 5px 0px 5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #e0e0e0;
+    margin-bottom: 20px;
+    overflow: hidden;
+    @for $i from 1 through 10 {
+        &--#{$i} {
+            animation: prog 1000ms 400ms + ($i * 400ms) both ease-in-out;
+        }
+    }
+    &_main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 85%;
+        overflow: hidden;
+        h4 {
+            margin: 5px 0 5px 0;
+        }
+        p {
+            margin: 0;
+            padding-right: 5px;
+        }
+    }
+    &_price {
+        align-self: flex-end;
+        font-weight: bold;
+        padding-right: 2%;
+        padding-bottom: 4px;
+    }
+    & .i {
+        height: 90px;
+        width: 90px;
+        color: white;
+        background-color: $color-tertiary;
+        padding: 30px;
+        border-radius: 0 20px 20px 0;
+        margin: 0 -100px 0 30px;
+        transition: margin-right 400ms;
+        i {
+            font-size: 30px;
+            transform: rotate(180deg);
+            transition: transform 700ms;
+        }
+    }
+    &:hover {
+        box-shadow: 4px 6px 10px #cfcece, -4px -4px 10px #cfcece;
+        cursor: pointer;
+        .dish_main {
+            #st-jacques {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            p {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        .dish_price {
+            margin-right: -20px;
+        }
+        .i {
+            margin-right: -5px;
+            i {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}

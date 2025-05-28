@@ -1,0 +1,108 @@
+main {
+    display: flex;
+    flex-direction: column;
+    .main_pic {
+        max-height: 190px;
+        object-fit: cover;
+        object-position: 0 55%;
+    }
+
+/*WORKING*/
+    .working {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0 80px 0;
+        h2 {
+            align-self: flex-start;
+            margin-left: 2%;
+        }
+        .block__steps {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 360px;
+            width: 85%;
+            .step {
+                @include working__step
+            }
+        }
+    }
+
+/*RESTAURANTS*/
+    .restaurants {
+        width: 100%;
+        background-color: #f7f7f7;
+        padding: 40px 0 80px 0;
+        h2 {
+            margin-left: 2%;
+        }
+        .block__card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 1100px;
+            .resto__card {
+               @include resto__card 
+            }
+        }
+    }
+
+/*MENU*/
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 50px 50px 0 0;
+        margin-top: -50px;
+        .menu_title {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 260px;
+            width: 100%;
+            i {
+                position: absolute;
+                right: 0;
+                top: 20px;
+                font-size: 25px;
+                cursor: pointer;
+            }
+            .fa-solid {
+                color: $color-primary;
+                z-index: 1;
+                opacity: 0;
+                transition: opacity 800ms;
+                &:hover {
+                    opacity: 1;
+                } 
+            }
+        }
+        .block__dishes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            h3 {
+                font-weight: normal;
+                align-self: flex-start;
+                border-bottom: 2px solid $color-tertiary;
+            }
+            .dish {
+                @include dish;
+            }
+        }
+        #command {
+            margin: 40px 0 40px 0;
+        }
+        button {
+            @include button
+        }
+    }
+}

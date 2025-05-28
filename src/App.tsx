@@ -11,6 +11,7 @@ import { Booki } from './pages/booki/Booki.tsx';
 
 /*************************************[ COMPONENTS ]*/
 import { Navbar } from './components/hub/others/Navbar.tsx';
+import { OhMyFood } from './pages/training/OhMyFood.tsx';
 /****************************************************/
 /************************************************************************/
 
@@ -41,6 +42,13 @@ export const App: FC = (): ReactElement => {
                     path='/training/booki'
                     element={
                         <Booki />
+                    }
+                />
+
+                <Route
+                    path='/training/oh_my_food'
+                    element={
+                        <OhMyFood />
                     }
                 />
 

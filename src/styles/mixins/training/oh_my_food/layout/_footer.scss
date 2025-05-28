@@ -1,0 +1,30 @@
+footer {
+    color: white;
+    background-color: #404040;
+    padding: 30px 0 40px 30px;
+    .footer {
+        display: flex;
+        flex-direction: column;
+        div {
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 14px;
+                margin: 0 15px 0 0;
+            }
+            #partners {
+                margin-left: -5px;
+            }
+        }
+        a {
+            color: white;
+            margin: 5px 0 5px 0;
+            &:nth-child(4) {
+                margin-top: 5px;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }  
+}
