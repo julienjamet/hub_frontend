@@ -163,6 +163,16 @@
                 font-size: 3rem;
                 color: colors.$secondary;
             }
+
+            ul {
+                padding-left: 16px;
+
+                li {
+                    font-weight: bold;
+                    text-align: justify;
+                    margin: 10px 0;
+                }
+            }
         }
 
         &:hover {

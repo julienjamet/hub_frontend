@@ -21,7 +21,7 @@ export interface HubProject {
     number: number;
     name: string;
     image: string;
-    subject: string[];
+    subject: string;
     skills: Skill[];
     difficulty: number;
     startings: Starting[];
