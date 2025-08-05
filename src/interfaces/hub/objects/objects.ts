@@ -27,5 +27,7 @@ export interface HubProject {
     startings: Starting[];
     category: string;
     available: boolean;
+    integrated: boolean;
+    url: string;
 };
 /****************************************************/

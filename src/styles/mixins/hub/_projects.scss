@@ -133,12 +133,6 @@
         margin: 2rem 0.5rem;
         cursor: pointer;
 
-        @for $i from 0 through 99 {
-            &--#{$i} {
-                animation: appear 1000ms ($i * 200ms) both;
-            }
-        }
-
         a {
             display: flex;
             flex-direction: column;
@@ -212,7 +206,6 @@
         height: 100%;
         width: 100%;
         background: rgba($color: colors.$primary, $alpha: 0.75);
-        animation: appearFromTop 600ms both;
         
         .projects {
             height: 100%;

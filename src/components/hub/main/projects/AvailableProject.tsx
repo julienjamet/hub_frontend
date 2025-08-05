@@ -19,7 +19,7 @@ export const AvailableProject: FC<IProjectCard> = (props): ReactElement => {
 
     /*************************************[ RETURN ]*/
     return (
-        <NavLink to={projectUrl}>
+        <NavLink to={props.project.integrated === true ? projectUrl : props.project.url}>
             <img src={props.project.image} alt={`Project ${props.project.name}`} />
 
             <h2>{props.project.name}</h2>
