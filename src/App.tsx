@@ -10,6 +10,7 @@ import { Booki } from './pages/booki/Booki.tsx';
 /****************************************************/
 
 /*************************************[ COMPONENTS ]*/
+import { AboutMe } from './components/hub/others/AboutMe.tsx';
 import { Navbar } from './components/hub/others/Navbar.tsx';
 import { OhMyFood } from './pages/training/OhMyFood.tsx';
 /****************************************************/
@@ -21,6 +22,8 @@ export const App: FC = (): ReactElement => {
     /*************************************[ RETURN ]*/
     return (
         <BrowserRouter>
+            <AboutMe />
+
             <Navbar />
 
             <Routes>
