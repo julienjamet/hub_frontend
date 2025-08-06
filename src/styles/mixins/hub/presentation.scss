@@ -30,5 +30,21 @@
             }
         }
     }
+
+    @media all and (max-width: 992px) {
+        .presentation {
+            top: 0;
+
+            div {
+                width: 100%;
+                padding: 0.5rem 0;
+                border-radius: 0 0 0.5rem 0.5rem;
+
+                p {
+                    margin: 0.5rem 0;
+                }
+            }
+        }
+    }
 }
 /************************************************************************/
